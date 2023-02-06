@@ -1,4 +1,85 @@
 body{
     font-family: "Rockwell";
-    
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* background: no-repeat linear-gradient(0deg, rgba(2, 0, 36, 0.829) 0%, rgba(0, 119, 255, 0.274) 100%); */
+    animation-name: backgradient 5s ease infinite;
 }
+.main-content >*{
+    margin-top: 10vh;
+}
+a:link{
+    color: rgba(58, 0, 219, 0.534);
+}
+a:hover{
+    animation-name: linkHover;
+    animation-duration: 1s;
+    color: rgb(40, 22, 90);
+}
+.personal-info{
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.personal-links{
+    position: sticky;
+    top: 5px;
+    flex-direction: row;
+    width: 100%;
+}
+.personal-links > *{
+    margin: 10px;
+}
+
+.main-bg1{
+    background-image: linear-gradient(-30deg, #8c6ac283 25%, #ffffff00 20%);
+    animation: backSlide 10s ease-in-out infinite alternate;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -50%;
+    right: -50%;
+    opacity: 0.5;
+    z-index: -1;
+    }
+.main-bg2{
+        background-image: linear-gradient(150deg, #8c6ac283 25%, #ffffff00 20%);
+        animation: backSlide 10s ease-in-out infinite alternate;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -50%;
+        right: -50%;
+        opacity: 0.5;
+        z-index: -1;
+    }
+     
+    .layer1 {
+    animation-direction: alternate-reverse;
+    animation-duration: 7s;
+    }
+     
+    .layer2 {
+    animation-duration: 5s;
+    }
+
+@keyframes linkHover {
+    0%{
+        color: rgba(40, 22, 90, 0.534);
+    }
+    100%{
+        color: rgb(40, 22, 90);
+    }
+}
+@keyframes backSlide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+    }
