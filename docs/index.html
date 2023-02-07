@@ -18,18 +18,19 @@
     <div class="main-content">
 
         <div class="intro">
-            <h1>Hello World</h1>
+            <h1>Hello World!</h1>
             <p>
                 Hello again and welcome to my site! 
-                <br> Here you'll find my web development projects.
+                <br> Here you'll find links to my projects and contacts.
             </p>
         </div>
 
         <div class="personal-info">
-            <h2>Who am I?</h2>
-            <p>A fresh upcoming programmer!
-                <br> I'm on my final steps of my studies at Lapland UAS.
-                <br> The degree I'm studying for is Bachelor of Engineering in ICT engineering.
+            <h2><i class="fa fa-child"></i> Who am I? <i class="fa fa-child"></i></h2>
+            <p>A fresh upcoming software developer!
+                <br> I'm planning on graduating this year from Lapland UAS 
+                    with a Bachelor of Engineering in ICT.
+                
             </p>
             <div class="personal-links">
                 <a href="./assets/MarkoTiitto_English_CV.pdf" target="_blank">
@@ -43,12 +44,63 @@
 
         <div class="app-links">
             <h2><i class="fa fa-code"></i> Projects <i class="fa fa-code"></i></h2>
-            <a href="https://markomikaelt.github.io/portfolio-react-app/" target="_blank">
-                portfolio-react-app
-            </a>
+
+            <table class="app-table" >
+                <tr>
+                    <th>Github</th>
+                    <th>Description</th>
+                    <th>Demo</th>
+                </tr>
+
+                <tr class="project id1">
+                    <td>
+                        <a href="https://github.com/MarkoMikaelT/portfolio-react-app" target="_blank">
+                            portfolio-react-app</a></td>
+                    <td>
+                        Vite + React app for showing my more visual web development skills.
+                        </td>
+                    <td>
+                        <a href="https://markomikaelt.github.io/portfolio-react-app/" target="_blank">
+                            portfolio-react-app</a></td>
+                </tr>
+                <tr class="project id-2">
+                    <td>
+                        <a href="https://github.com/MarkoMikaelT/JobpostScraper" target="_blank">
+                            Jobpost Scraper</a></td>
+                    <td>
+                        Python web scraper + Java API + React Front.
+                        </td>
+                    <td> No live version</td>
+                </tr>
+
+
+
+            </table>
+
         </div>
     </div>
 
 
 </body>
+<script>
+const root = document.documentElement;
+
+let x = 0
+let y = 0
+
+document.addEventListener("DOMContentLoaded", ev => {
+    x = 0.5
+    y = 0.5
+    root.style.setProperty('--mouse-x', x);
+    root.style.setProperty('--mouse-y', y);
+});
+
+document.addEventListener('mousemove', evt => {
+     x = evt.clientX / innerWidth;
+     y = evt.clientY / innerHeight;
+  
+     root.style.setProperty('--mouse-x', x);
+     root.style.setProperty('--mouse-y', y);
+ });
+</script>
 </html>

@@ -10,7 +10,7 @@ body{
     animation-name: backgradient 5s ease infinite;
 }
 .main-content >*{
-    margin-top: 10vh;
+    margin-top: 5vh;
 }
 a{
     color: rgba(58, 0, 219, 0.534);
@@ -21,7 +21,8 @@ a:hover{
     color: rgb(40, 22, 90);
 }
 .personal-info{
-    width: 50vw;
+    width: 80vw;
+    max-width: 440px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -34,9 +35,34 @@ a:hover{
 .personal-links > *{
     margin: 10px;
 }
+.app-links{
+    width: 80vw;
+    max-width: 600px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+table.app-table{
+    border-collapse: collapse;
+}
+tr.project{
+    border-top: 3px solid #8c6ac283;
+}
+tr.project:hover{
+    animation: boxShadow 1s ease-out 1;
+    box-shadow: 5px 5px;
+}
+tr.project>*{
+    padding: 12px;
+}
 
-.main-bg1{
-    background-image: linear-gradient(-30deg, #8c6ac283 25%, #ffffff00 20%);
+.fa-child:active{
+    animation: shaking 80ms linear infinite;
+    /* transform: translate(calc(var(--mouse-x) * 10), calc(var(--mouse-y) * 10vh)) ; */
+}
+
+.main-bg1, .main-bg2{  /*OG background color = #8c6ac283*/
+    background-image: linear-gradient(-30deg, rgba(calc(var(--mouse-x) * 200), 114, 202, 0.25) 25%, #ffffff00 20%);
     animation: backSlide 10s ease-in-out infinite alternate;
     position: fixed;
     top: 0;
@@ -47,17 +73,9 @@ a:hover{
     z-index: -1;
     }
 .main-bg2{
-        background-image: linear-gradient(150deg, #8c6ac283 25%, #ffffff00 20%);
-        animation: backSlide 10s ease-in-out infinite alternate;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: -50%;
-        right: -50%;
-        opacity: 0.5;
-        z-index: -1;
-    }
-     
+    background-image: linear-gradient(150deg, rgba(calc(var(--mouse-y) * 200), 114, 202, 0.25) 25%, #ffffff00 20%);
+}
+    
     .layer1 {
     animation-direction: alternate-reverse;
     animation-duration: 7s;
@@ -82,4 +100,27 @@ a:hover{
     100% {
         transform: translateX(25%);
     }
+}
+@keyframes boxShadow {
+    0%{
+        box-shadow: 0px 0px;
     }
+    100%{
+        box-shadow: 5px 5px;
+    }
+}
+@keyframes shaking {
+    0%{
+        rotate: 0deg;
+    }
+    33%{
+        rotate: 30deg;
+    }
+    66%{
+        rotate: -30deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+    
+}
