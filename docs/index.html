@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Marko Tiitto - Main Page</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./styles.css"  />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+
+<head>
+    <title>Marko Tiitto - Main Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <body>
     <div class="main-bg1"></div>
     <div class="main-bg1 layer1"></div>
@@ -20,7 +22,7 @@
         <div class="intro">
             <h1>Hello World!</h1>
             <p>
-                Hello again and welcome to my site! 
+                Hello again and welcome to my site!
                 <br> Here you'll find links to my projects and contacts.
             </p>
         </div>
@@ -28,51 +30,70 @@
         <div class="personal-info">
             <h2><i class="fa fa-child"></i> Who am I? <i class="fa fa-child"></i></h2>
             <p>A fresh upcoming software developer!
-                <br> Bachelor of Engineering in Infomation and Communication Technology.
-                <br> Mainly work on web development but dapple around other topics too.
-                
+                <br> I have a Bachelor of Engineering in Infomation and Communication Technology.
+                <br> I have mainly worked on web development but dapple around other topics too.
             </p>
             <div class="personal-links">
-                <a href="https://urn.fi/URN:NBN:fi:amk-202401302241" target="_blank">
-                    <i class="fa fa-book fa-3x"></i></a>	
-                <a href="https://fi.linkedin.com/in/marko-tiitto" target="_blank">
+                <a href="https://urn.fi/URN:NBN:fi:amk-202401302241" title="Bachelor Thesis" aria-label="Bachelor Thesis" target="_blank">
+                    <i class="fa fa-book fa-3x"></i></a>
+                <a href="https://fi.linkedin.com/in/marko-tiitto" title="LinkedIn" aria-label="LinkedIn marko-tiitto" target="_blank">
                     <i class="fa fa-linkedin-square fa-3x"></i></a>
-                <a href="https://github.com/MarkoMikaelT" target="_blank">
-                    <i class="fa fa-github-square fa-3x"></i> </a>     
+                <a href="https://github.com/MarkoMikaelT" title="Github" aria-label="Github MarkoMikaelT" target="_blank">
+                    <i class="fa fa-github-square fa-3x"></i> </a>
             </div>
         </div>
 
         <div class="app-links">
             <h2><i class="fa fa-code"></i> Projects <i class="fa fa-code"></i></h2>
 
-            <table class="app-table" >
+            <table class="app-table">
                 <tr>
                     <th>Github</th>
                     <th>Description</th>
                     <th>Demo</th>
                 </tr>
-
-                <tr class="project id1">
-                    <td>
-                        <a href="https://github.com/MarkoMikaelT/portfolio-react-app" target="_blank">
-                            portfolio-react-app</a></td>
-                    <td>
-                        Vite + React app of simple games.
+                <tbody class="app-table-body">
+                    <tr class="project id1">
+                        <td>
+                            <a href="https://github.com/MarkoMikaelT/portfolio-react-app" target="_blank">
+                                portfolio-react-app</a>
                         </td>
-                    <td>
-                        <a href="https://markomikaelt.github.io/portfolio-react-app/" target="_blank">
-                            portfolio-react-app</a></td>
-                </tr>
-                <tr class="project id-2">
-                    <td>
-                        <a href="https://github.com/MarkoMikaelT/JobpostScraper" target="_blank">
-                            Jobpost Scraper</a></td>
-                    <td>
-                        Python web scraper + Java Back + React Front.
+                        <td>
+                            Vite + React app of simple games.
                         </td>
-                    <td> No live version</td>
-                </tr>
-
+                        <td>
+                            <a href="https://markomikaelt.github.io/portfolio-react-app/" aria-label="link to site" target="_blank">
+                                <i class="fa fa-link fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class="project id-2">
+                        <td>
+                            <a href="https://github.com/MarkoMikaelT/JobpostScraper" target="_blank">
+                                Jobpost Scraper</a>
+                        </td>
+                        <td>
+                            Python web scraper + Java Back + React Front.
+                        </td>
+                        <td>
+                            No live version
+                        </td>
+                    </tr>
+                    <tr class="project id-3">
+                        <td>
+                            <a href="https://github.com/MarkoMikaelT/what-my-browser-has" target="_blank">
+                                What my browser has/requests</a>
+                        </td>
+                        <td>
+                            Trying out Svelte.
+                        </td>
+                        <td>
+                            <a href="https://markomikaelt.github.io/what-my-browser-has" aria-label="link to site" target="_blank">
+                                <i class="fa fa-link fa-2x"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
@@ -80,24 +101,25 @@
 
 </body>
 <script>
-const root = document.documentElement;
+    const root = document.documentElement;
 
-let x = 0
-let y = 0
+    let x = 0
+    let y = 0
 
-document.addEventListener("DOMContentLoaded", ev => {
-    x = 0.5
-    y = 0.5
-    root.style.setProperty('--mouse-x', x);
-    root.style.setProperty('--mouse-y', y);
-});
+    document.addEventListener("DOMContentLoaded", ev => {
+        x = 0.5
+        y = 0.5
+        root.style.setProperty('--mouse-x', x);
+        root.style.setProperty('--mouse-y', y);
+    });
 
-document.addEventListener('mousemove', evt => {
-     x = evt.clientX / innerWidth;
-     y = evt.clientY / innerHeight;
-  
-     root.style.setProperty('--mouse-x', x);
-     root.style.setProperty('--mouse-y', y);
- });
+    document.addEventListener('mousemove', evt => {
+        x = evt.clientX / innerWidth;
+        y = evt.clientY / innerHeight;
+
+        root.style.setProperty('--mouse-x', x);
+        root.style.setProperty('--mouse-y', y);
+    });
 </script>
+
 </html>
