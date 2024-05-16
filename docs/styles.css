@@ -54,6 +54,7 @@ tr.project:hover{
 }
 tr.project>*{
     padding: 6px;
+    width: 33%;
 }
 
 .fa-child:active{
